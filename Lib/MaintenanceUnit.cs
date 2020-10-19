@@ -4,6 +4,11 @@ namespace ReminderLibrary
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string TypeName { get; set; } //Will be used in a switch for parsing
+        public System.Type Type { get; set; } //Will be used in a switch for parsing
+        public MaintainableUnit(string name, System.Type type)
+        {
+            this.Name = name;
+            this.Type = type;
+        }
     }
 }
